@@ -1,4 +1,4 @@
-import { IsInt, Min, Max, IsArray, ArrayMinSize, ValidateNested, Validate, ValidatorConstraint, ValidatorConstraintInterface, ValidationArguments, IsBoolean, IsString, IsNotEmpty, IsEnum, ArrayNotEmpty, IsOptional, ArrayMaxSize } from 'class-validator';
+import { IsInt, Min, Max, IsArray, ArrayMinSize, ValidateNested, Validate, ValidatorConstraint, ValidatorConstraintInterface, ValidationArguments, IsBoolean, IsString, IsNotEmpty, IsEnum, ArrayNotEmpty, IsOptional, ArrayMaxSize, ValidateIf } from 'class-validator';
 import { Type } from 'class-transformer';
 import { Naturaleza, BloqueSesion, MetaEjercicio, DensidadEspacial, ResolucionNumerica } from '@prisma/client';
 
@@ -118,7 +118,10 @@ export class CreateTareaDto {
   // ----------------------------------------------------
   // 6.5 Estructura de Juego
   // ----------------------------------------------------
-  @IsOptional() @IsEnum(MetaEjercicio) meta_ejercicio?: MetaEjercicio;
+  @ValidateIf(o => o.nivel >= 4 && o.naturaleza === Naturaleza.GLOBAL)
+  @IsEnum(MetaEjercicio)
+  @IsNotEmpty({ message: 'Sección 9: Toda tarea de Nivel 4-5 con formato de juego (no analítico) debe clasificar obligatoriamente su meta_ejercicio (Conservación o Finalización).' })
+  meta_ejercicio?: MetaEjercicio;
   @IsOptional() @IsEnum(DensidadEspacial) densidad_espacial?: DensidadEspacial;
   @IsOptional() @IsEnum(ResolucionNumerica) resolucion_numerica?: ResolucionNumerica;
   
