@@ -1,0 +1,140 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Pilar {
+  FISICO
+  TECNICO
+  TACTICO
+  COGNITIVO_EMOCIONAL
+}
+
+model SubPilar {
+  codigo      String @id
+  nombre      String
+  descripcion String
+  pilar       Pilar
+
+  // Relación inversa a través de la tabla intermedia
+  tarea_subpilares TareaSubPilar[]
+}
+
+enum TipoModificador {
+  ESTRESOR_COGNITIVO
+  VECTOR_VARIABILIDAD
+}
+
+model ModificadorAvanzado {
+  codigo      String  @id
+  nombre      String
+  tipo        TipoModificador
+  descripcion String
+  
+  // Relaciones inversas
+  tareas      Tarea[]
+}
+
+// Tabla intermedia explícita (Sección 3 de BIBLIOTECA_TAREAS_ESTRUCTURA.md)
+model TareaSubPilar {
+  tarea_id        String
+  subpilar_codigo String
+  es_principal    Boolean
+
+  tarea    Tarea    @relation(fields: [tarea_id], references: [id_tarea])
+  subpilar SubPilar @relation(fields: [subpilar_codigo], references: [codigo])
+
+  @@id([tarea_id, subpilar_codigo])
+}
+
+enum Naturaleza {
+  ANALITICO
+  GLOBAL
+}
+
+enum BloqueSesion {
+  ACTIVACION
+  MOVILIDAD_PREVENCION
+  TECNICA
+  DECISION
+  TRANSFERENCIA
+}
+
+enum MetaEjercicio {
+  CONSERVACION
+  FINALIZACION
+}
+
+enum DensidadEspacial {
+  MICRO
+  MACRO
+}
+
+enum ResolucionNumerica {
+  IGUALDAD
+  SUPERIORIDAD
+  INFERIORIDAD
+}
+
+model Tarea {
+  // 6.1 Identificación
+  id_tarea String @id
+  nombre   String
+  familia  String
+
+  // 6.2 Clasificación (etiquetas via tabla intermedia TareaSubPilar)
+  // El campo es_principal dentro de TareaSubPilar indica cuál es el tag dominante
+  tarea_subpilares TareaSubPilar[]
+
+  // 6.3 Progresión
+  nivel    Int
+  variante String
+
+  // 6.4 Metadatos de Aplicación Práctica
+  naturaleza                Naturaleza
+  bloque_sesion             BloqueSesion
+  duracion_estimada         String
+  carga_estimada_rpe_fisico Int
+  carga_estimada_rpe_mental Int
+  jugadores_min             Int
+  jugadores_max             Int
+  posiciones_recomendadas   String[]
+
+  // 6.5 Estructura de Juego
+  meta_ejercicio      MetaEjercicio?
+  densidad_espacial   DensidadEspacial?
+  resolucion_numerica ResolucionNumerica?
+  formato_numerico    String?
+  reglas_provocacion  String[]
+  reglas_continuidad  String[]
+
+  // 6.6 Recursos
+  material            String[]
+  espacio             String
+  sensores_requeridos Int
+
+  // 6.7 Descripción y Ejecución
+  descripcion         String
+  objetivo_principal  String
+  consigna_al_jugador String?
+  criterio_exito      String?
+  errores_frecuentes  String?
+
+  // 6.8 Escalabilidad
+  variante_mas_facil   String?
+  variante_mas_dificil String?
+  progresa_hacia       String?
+  regresa_hacia        String?
+
+  // 6.9 Modificadores Avanzados
+  modificadores_avanzados ModificadorAvanzado[]
+
+  // 6.10 Evidencia y Media
+  video_url  String?
+  imagen_url String?
+  notas      String?
+}

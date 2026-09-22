@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAVIX Academy — Programa Élite de Entrenamiento Personalizado</title>
+    <link rel="icon" type="image/jpeg" href="fabicon.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0a0c;
+            --bg-card: #15161a;
+            --accent-green: #00ff88;
+            --accent-blue: #00e5ff;
+            --accent-gold: #ffd700;
+            --text-main: #f0f0f0;
+            --text-muted: #a0a0a5;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* ── Header ── */
+        header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+            padding-top: 2rem;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+            border-radius: 20%;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, var(--text-main), var(--text-muted));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--accent-green);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* ── Sections ── */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-blue));
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-green);
+            margin-bottom: 0.5rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        /* ── Grid ── */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .info-block {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .info-block h3 {
+            font-size: 1.1rem;
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        /* ── Lists ── */
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-green);
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+
+        /* ── Hero ── */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-graphic {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width: 600px) {
+            .hero-section {
+                flex-direction: column;
+            }
+        }
+
+        /* ── Diferenciador ── */
+        .diff-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .diff-item {
+            text-align: center;
+            padding: 1.2rem 0.8rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .diff-item .diff-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .diff-item h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.85rem;
+            color: var(--accent-blue);
+            margin-bottom: 0.3rem;
+        }
+
+        .diff-item p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        @media (max-width: 600px) {
+            .diff-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ── Timeline ── */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent-green), var(--accent-blue));
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 8px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--bg-dark);
+            border: 3px solid var(--accent-green);
+        }
+
+        .timeline-item:last-child::before {
+            border-color: var(--accent-blue);
+        }
+
+        .timeline-item h3 {
+            font-size: 1rem;
+            color: var(--accent-green);
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-item:last-child h3 {
+            color: var(--accent-blue);
+        }
+
+        .timeline-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* ── Pricing ── */
+        .pricing-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 650px) {
+            .pricing-table {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .plan {
+            background: linear-gradient(145deg, #1a1c21, #121316);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .plan.pro {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 40px rgba(0, 229, 255, 0.12), inset 0 1px 0 rgba(0, 229, 255, 0.15);
+        }
+
+        .plan.pro::after {
+            content: '⭐ MÁXIMO RENDIMIENTO';
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, var(--accent-blue), #0090ff);
+            color: var(--bg-dark);
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 5px 16px;
+            border-radius: 20px;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .plan-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 0.3rem;
+        }
+
+        .plan-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .plan-price {
+            font-size: 2rem;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .plan-price span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .plan ul {
+            flex: 1;
+        }
+
+        .plan ul li {
+            font-size: 0.9rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .plan-cta {
+            display: block;
+            text-align: center;
+            padding: 0.8rem;
+            border-radius: 10px;
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .plan:not(.pro) .plan-cta {
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+
+        .plan.pro .plan-cta {
+            background: linear-gradient(90deg, var(--accent-blue), #0090ff);
+            color: var(--bg-dark);
+        }
+
+        .pro-exclusive {
+            color: var(--accent-blue);
+            font-weight: 700;
+        }
+
+        /* ── Team ── */
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .team-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-green);
+            margin-bottom: 1rem;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.15);
+        }
+
+        .team-member h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .team-role {
+            font-size: 0.8rem;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .team-bio {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .team-bio strong {
+            color: var(--text-main);
+        }
+
+        /* ── Separator ── */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 3rem 0;
+        }
+
+        .section-divider::before,
+        .section-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+        }
+
+        .section-divider svg {
+            opacity: 0.4;
+        }
+
+        /* ── CTA Button ── */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--accent-green), #00cc6a);
+            color: var(--bg-dark);
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 255, 136, 0.2);
+        }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 600;
+        }
+
+        .contact-links a:hover {
+            color: var(--accent-green);
+        }
+
+        /* ── Callout ── */
+        .callout {
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.08), rgba(0, 229, 255, 0.05));
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 12px;
+            padding: 1.2rem 1.5rem;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .callout strong {
+            color: var(--accent-green);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <img src="fabicon.jpeg" alt="RAVIX Academy Logo" class="logo" onerror="this.style.display='none'">
+            <h1>RAVIX Academy</h1>
+            <p class="tagline">Entrenamiento Élite Personalizado</p>
+        </header>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- HERO: Qué es RAVIX -->
+        <!-- ══════════════════════════════════════════ -->
+        <section class="card hero-section">
+            <div class="hero-content">
+                <span class="section-label">Perfeccioná tu fútbol.</span>
+                <h2 style="margin-bottom: 1rem;">Llevá tu juego al siguiente nivel.</h2>
+                <p>RAVIX es <span class="highlight">un programa de entrenamiento personalizado de alto
+                        rendimiento</span>. Sabemos que detrás de cada
+                    jugador hay un sueño por cumplir y estamos acá para ayudarte a acercarte a ese objetivo.</p>
+                <br>
+                <p>Integramos perfeccionamiento técnico, entrenamiento cognitivo y táctica en una sola metodología. Te
+                    acompañamos en cada etapa de tu evolución para que cuando el juego lo exija, tu cuerpo y tu mente
+                    respondan eficientemente.</p>
+            </div>
+            <div class="hero-graphic">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="150" height="150">
+                    <defs>
+                        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00ff88;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#00e5ff;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="grad2" x1="100%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00ff88;stop-opacity:0.5" />
+                            <stop offset="100%" style="stop-color:#00e5ff;stop-opacity:0.1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="100" cy="100" r="90" fill="none" stroke="url(#grad2)" stroke-width="2"
+                        stroke-dasharray="4 6" />
+                    <path d="M100 30 L160 65 L160 135 L100 170 L40 135 L40 65 Z" fill="none" stroke="url(#grad)"
+                        stroke-width="3" />
+                    <path d="M100 30 L100 100 L160 135 M100 100 L40 135 M40 65 L100 100 L160 65" fill="none"
+                        stroke="#a0a0a5" stroke-width="1.5" opacity="0.5" />
+                    <!-- Nodos -->
+                    <circle cx="100" cy="100" r="22" fill="url(#grad)" />
+                    <circle cx="100" cy="30" r="8" fill="#15161a" stroke="url(#grad)" stroke-width="2" />
+                    <circle cx="160" cy="65" r="8" fill="#15161a" stroke="url(#grad)" stroke-width="2" />
+                    <circle cx="160" cy="135" r="8" fill="#15161a" stroke="url(#grad)" stroke-width="2" />
+                    <circle cx="100" cy="170" r="8" fill="#15161a" stroke="url(#grad)" stroke-width="2" />
+                    <circle cx="40" cy="135" r="8" fill="#15161a" stroke="url(#grad)" stroke-width="2" />
+                    <circle cx="40" cy="65" r="8" fill="#15161a" stroke="url(#grad)" stroke-width="2" />
+                    <circle cx="100" cy="100" r="6" fill="#0a0a0c" />
+                    <!-- Brain pulse lines -->
+                    <path d="M70 100 L82 100 L86 85 L92 115 L98 90 L104 110 L110 95 L114 100 L130 100" fill="none"
+                        stroke="#0a0a0c" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- ¿QUÉ NOS DIFERENCIA? -->
+        <!-- ══════════════════════════════════════════ -->
+        <section class="card">
+            <span class="section-label">Nuestro diferencial</span>
+            <h2>¿Por qué RAVIX?</h2>
+            <p>Trabajamos al detalle. Con una propuesta diferente,<strong>integramos conocimiento y tecnología para
+                    potenciar tu evolución</strong>, los tres pilares que sostienen a los mejores: la precisión técnica,
+                la inteligencia táctica y la
+                fortaleza mental.</p>
+
+            <div class="diff-grid">
+                <div class="diff-item">
+                    <div class="diff-icon">⚙️</div>
+                    <h4>Trabajamos tu Técnica</h4>
+                    <p>Corrección al detalle y de tu postura corporal para quitar malas costumbres y optimizar tu
+                        mecánica.</p>
+                </div>
+                <div class="diff-item">
+                    <div class="diff-icon">🧠</div>
+                    <h4>Entrenamos tu Mente</h4>
+                    <p>Con técnología sensorial y visual buscaremos afrontar diferentes escenarios de toma de desiciones
+                        para que seas más eficiente en competencia.</p>
+                </div>
+                <div class="diff-item">
+                    <div class="diff-icon">📹</div>
+                    <h4>Videoanálisis</h4>
+                    <p>Analizamos tus diferentes capacidades monitoreando las diferentes sesiones y corrigiendo con la
+                        visualización del error.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- FORMATO DEL PROGRAMA -->
+        <!-- ══════════════════════════════════════════ -->
+        <section class="grid-2">
+            <div class="info-block">
+                <h3>⏱ Formato de las Sesiones</h3>
+                <p><strong>Duración:</strong> 1 hora por sesión</p>
+                <p><strong>Frecuencia:</strong> 1 clase por semana</p>
+                <p><strong>Grupos:</strong> Máximo 4-5 jugadores por entrenador</p>
+                <p style="margin-top: 0.8rem; color: var(--text-muted); font-size: 0.85rem;">Cada sesión está diseñada
+                    como un microciclo complementario a tu actividad en tu club. No competimos con tu entrenamiento — lo
+                    potenciamos.</p>
+            </div>
+
+            <div class="info-block">
+                <h3>📅 Horarios Disponibles</h3>
+                <p><strong>Inicio:</strong> Lunes 5 de Octubre</p>
+                <p><strong>Turnos (a coordinar):</strong></p>
+                <ul>
+                    <li>Mañana: 08:00 a 12:00</li>
+                    <li>Tarde: 13:00 a 18:00</li>
+                    <li>Noche: 19:00 a 22:00</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="info-block" style="margin-bottom: 3rem;">
+            <h3>📍 Ubicación</h3>
+            <p><strong>Predio:</strong> A confirmar en los próximos días (complejo cerrado)— te notificaremos la
+                dirección exacta por
+                WhatsApp antes del inicio.</p>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- EL PROGRAMA: 12 SEMANAS -->
+        <!-- ══════════════════════════════════════════ -->
+        <section class="card">
+            <span class="section-label">El Programa</span>
+            <h2>Un Proceso Continuo de Mejora</h2>
+            <p style="margin-bottom: 2rem;">La constancia hace a los resultados. Comenzamos con un ciclo intensivo de 12
+                semanas para fijar tu base y medir progresos reales, que te servirá como base para seguir
+                potenciándote a largo plazo.</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Semana 0 — Evaluación Test Inicial</h3>
+                    <p>Evaluamos dónde estás parado y a dónde querés llegar. Analizamos tus capacidades físicas,
+                        técnicas y cognitivas para determinar exactamente qué podés mejorar. En base a eso,
+                        <strong>diseñamos una planificación a medida</strong> con la que trabajaremos el resto del
+                        ciclo.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Semanas 1 a 11 — Entrenamiento Personalizado</h3>
+                    <p>En base a lo evaluado en los diferentes test propondremos tareas para corregir aspectos
+                        técnicos, tácticos y cognitivos. La intensidad y el foco se adaptan a tu calendario de
+                        competencia.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Semana 12 — Re-Test y Resultados</h3>
+                    <p>Repetimos la evaluación inicial con las mismas condiciones. Entrega de <strong>informe
+                            comparativo completo</strong> con datos objetivos. Y en base a eso replanificamos el
+                        siguiente ciclo. Tu progreso se demuestra con números no con opiniones.</p>
+                </div>
+            </div>
+
+            <div class="callout">
+                <strong>💡 Dato clave:</strong> La carga
+                cognitiva alta no implica carga física alta. Podés hacer
+                trabajo neuro-perceptivo de máxima exigencia incluso a un día de tu partido sin comprometer tu
+                rendimiento. <em>Y es sumamente necesario para el fútbol moderno.</em>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- QUIÉNES TE ACOMPAÑAN -->
+        <!-- ══════════════════════════════════════════ -->
+        <section class="card">
+            <span class="section-label">Nuestro Equipo</span>
+            <h2>Quiénes te Acompañan</h2>
+            <p style="margin-bottom: 1.5rem;">Atrás de RAVIX hay un equipo profesional multidisciplinario que trabaja en
+                conjunto para tu desarrollo integral.</p>
+
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="andres.jpg" alt="Andrés Gómez" class="team-photo" onerror="this.style.display='none'">
+                    <h3>Andrés Gómez</h3>
+                    <div class="team-role">Director Técnico & Psicólogo</div>
+                    <p class="team-bio">
+                        <strong>Director técnico Licencia Conmebol PRO.</strong> Licenciado en Psicología. Trayectoria
+                        en Miramar
+                        Misiones. Videoanalista institucional en Terremoto FC (Primera a Sub-14). Entrenador en Crandon
+                        Universitario Sub-18.
+                    </p>
+                </div>
+                <div class="team-member">
+                    <img src="gonzalo.jpg" alt="Gonzalo Antelo" class="team-photo" onerror="this.style.display='none'">
+                    <h3>Gonzalo Antelo</h3>
+                    <div class="team-role">Director Técnico & Tecnología</div>
+                    <p class="team-bio">
+                        <strong>Director técnico Licencia Conmebol PRO.</strong> Asistente técnico Sub-18 en
+                        Universitario Crandon.
+                        Especialista en técnica individual, desarrollo neuro-cognitivo y aplicación de tecnología al
+                        entrenamiento.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- PLANES -->
+        <!-- ══════════════════════════════════════════ -->
+        <section>
+            <div style="padding: 0 0.5rem; margin-bottom: 2rem;">
+                <span class="section-label">Planes</span>
+                <h2>Elegí tu Nivel de Acompañamiento</h2>
+                <p style="color: var(--text-muted);">Comenzamos con un ciclo de 12 semanas para establecer tu base de
+                    trabajo.
+                    Ambos planes incluyen
+                    entrenamiento cognitivo con sensores, evaluación de ingreso y reporte comparativo final.</p>
+            </div>
+
+            <div class="pricing-table">
+                <!-- Plan Core -->
+                <div class="plan">
+                    <div class="plan-name">Plan Core</div>
+                    <div class="plan-subtitle">Entrenamiento grupal con tecnología</div>
+                    <div class="plan-price">$4.000 <span>UYU / mes</span></div>
+                    <ul>
+                        <li>1 clase semanal de 60 minutos en grupos reducidos</li>
+                        <li>Tecnología de sensores cognitivos en cancha</li>
+                        <li>2 testeos completos (ingreso + final)</li>
+                        <li><strong>Videoanálisis mensual de tus entrenamientos</strong> (se te envía el recorte de tu
+                            tarea y una devolución en PDF tipo "carnet" de rendimiento)</li>
+                        <li>Control de carga física y mental por sesión (RPE)</li>
+                    </ul>
+                    <a href="https://wa.me/59892105554" target="_blank" class="plan-cta">Consultar disponibilidad</a>
+                </div>
+
+                <!-- Plan Pro -->
+                <div class="plan pro">
+                    <div class="plan-name" style="color: var(--accent-blue);">Plan Pro</div>
+                    <div class="plan-subtitle">Atención integral y seguimiento total</div>
+                    <div class="plan-price" style="color: var(--accent-blue);">$6.500 <span>UYU / mes</span></div>
+                    <ul>
+                        <li><strong>Todo lo incluido en el Plan Core</strong></li>
+                        <li><span class="pro-exclusive">+ 1 sesión teórica mensual extra</span> — clase 1 a 1
+                            de táctica y análisis de video, enfocada puramente en corregir tus detalles y reforzar el
+                            plan a medida.</li>
+                        <li><span class="pro-exclusive">+ Videoanálisis de tus partidos oficiales</span> — analizamos
+                            los clips que nos proporciones de tus partidos (y te vamos a ver jugar 1 vez al mes) para
+                            evaluar escaneo, orientación y toma de decisión en competencia real.</li>
+                        <li><span class="pro-exclusive">+ Seguimiento psicológico directo</span> — trabajo de
+                            autorregulación emocional, gestión del error y mentalidad competitiva con profesional
+                            licenciado</li>
+
+                    </ul>
+                    <a href="https://wa.me/59892105554" target="_blank" class="plan-cta">Reservar mi lugar Pro</a>
+                </div>
+            </div>
+
+            <div class="callout" style="margin-top: 2rem;">
+                <strong>¿Por qué elegir el Plan Pro?</strong> El entrenamiento en cancha te da la base física y técnica.
+                Pero el salto real
+                viene cuando un profesional analiza <em>tu</em> toma de decisión en partidos reales, te enseña táctica 1
+                a 1 con video,
+                y un psicólogo deportivo te acompaña en el proceso.
+                <strong>Si querés profesionalizar cada aspecto de tu juego, el Pro es el camino.</strong>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- INSCRIPCIÓN -->
+        <!-- ══════════════════════════════════════════ -->
+        <section class="card">
+            <span class="section-label">Inscripción</span>
+            <h2>Reservá tu Vacante</h2>
+            <p>Los cupos son limitados para garantizar atención personalizada. <strong>Se abona del 1 al 10 de cada mes,
+                    por adelantado.</strong> Aceptamos los siguientes métodos de pago
+                (datos exactos se envían por privado al confirmar tu vacante):</p>
+            <br>
+            <ul>
+                <li>Transferencia Bancaria (BROU / Banco privado)</li>
+                <li>MercadoPago (Tarjetas / Cuotas)</li>
+                <li>Efectivo (directo en el predio la primera semana)</li>
+            </ul>
+
+            <a href="https://wa.me/59892105554" target="_blank" class="btn">Reservar mi lugar por WhatsApp →</a>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- CIERRE MOTIVACIONAL -->
+        <!-- ══════════════════════════════════════════ -->
+        <section style="text-align: center; margin-top: 3rem; margin-bottom: 1rem; padding: 0 1rem;">
+            <h2 style="color: var(--text-main); margin-bottom: 0.5rem;">El talento te trajo hasta acá. La excelencia te
+                lleva más lejos.</h2>
+            <p
+                style="color: var(--text-muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">
+                Estamos listos para acompañarte en cada sesión, en cada detalle, en cada evolución. En RAVIX entrenamos
+                para que seas el jugador que marca la diferencia <strong>en los momentos más decisivos del
+                    partido</strong>. ¡Nos vemos en la cancha, el equipo te espera!
+            </p>
+        </section>
+
+        <footer>
+            <p>RAVIX Academy &copy; 2026. Todos los derechos reservados.</p>
+            <div class="contact-links">
+                <a href="https://wa.me/59892105554" target="_blank">WhatsApp: 092 105 554</a>
+                <a href="https://instagram.com/ravix.training" target="_blank">IG: @ravix.training</a>
+                <a href="mailto:ravix.training@gmail.com">ravix.training@gmail.com</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
