@@ -1,0 +1,62 @@
+export const SUB_PILARES = {
+  FISICO: [
+    { id: 'FIS-FTI', nombre: 'Fuerza del tren inferior' },
+    { id: 'FIS-FTS', nombre: 'Fuerza del tren superior' },
+    { id: 'FIS-AGI', nombre: 'Agilidad y desplazamiento corto' },
+    { id: 'FIS-VRE', nombre: 'Velocidad de reacción' },
+    { id: 'FIS-VMA', nombre: 'Velocidad máxima' },
+    { id: 'FIS-ELA', nombre: 'Elasticidad / flexibilidad' },
+    { id: 'FIS-CMO', nombre: 'Coordinación mano-ojo' },
+    { id: 'FIS-EQC', nombre: 'Equilibrio y coordinación' },
+    { id: 'FIS-CCO', nombre: 'Composición corporal' },
+  ],
+  TECNICO: [
+    { id: 'TEC-ATA', nombre: 'Técnica de atajada' },
+    { id: 'TEC-DBL', nombre: 'Desvíos y bloqueos' },
+    { id: 'TEC-JAE', nombre: 'Juego aéreo y salidas' },
+    { id: 'TEC-CMN', nombre: 'Control con manos' },
+    { id: 'TEC-RPM', nombre: 'Reposición con manos' },
+    { id: 'TEC-PAC', nombre: 'Pase corto' },
+    { id: 'TEC-PAL', nombre: 'Pase largo' },
+    { id: 'TEC-1V1', nombre: 'Uno contra uno' },
+    { id: 'TEC-CPT', nombre: 'Control y primer toque' },
+    { id: 'TEC-COP', nombre: 'Control orientado y perfilado' },
+    { id: 'TEC-PCR', nombre: 'Pared + cambio de ritmo' },
+    { id: 'TEC-PDE', nombre: 'Pase diagonal al espacio' },
+  ],
+  TACTICO: [
+    { id: 'TAC-UBA', nombre: 'Ubicación en el arco' },
+    { id: 'TAC-LDJ', nombre: 'Lectura del juego' },
+    { id: 'TAC-COM', nombre: 'Comunicación en defensa' },
+    { id: 'TAC-COB', nombre: 'Cobertura fuera del área' },
+    { id: 'TAC-SAL', nombre: 'Participación en salida de balón' },
+    { id: 'TAC-ABP', nombre: 'Interpretación balón parado' },
+    { id: 'TAC-3HM', nombre: 'Tercer hombre' },
+    { id: 'TAC-HLB', nombre: 'Hombre libre' },
+    { id: 'TAC-JDP', nombre: 'Juego de posición' },
+  ],
+  COGNITIVO_EMOCIONAL: [
+    { id: 'EMO-ACE', nombre: 'Actitud y esfuerzo' },
+    { id: 'EMO-RES', nombre: 'Resiliencia' },
+    { id: 'EMO-CON', nombre: 'Concentración' },
+    { id: 'EMO-AUC', nombre: 'Autoconfianza' },
+    { id: 'EMO-CEF', nombre: 'Comunicación efectiva' },
+    { id: 'EMO-GEM', nombre: 'Gestión emocional' },
+    { id: 'EMO-RSP', nombre: 'Responsabilidad' },
+    { id: 'EMO-ACO', nombre: 'Actitud competitiva' },
+    { id: 'EMO-ACR', nombre: 'Actitud frente a la crítica' },
+    { id: 'EMO-RGR', nombre: 'Relación con el grupo' },
+    { id: 'EMO-CCS', nombre: 'Comprensión de consignas' },
+    { id: 'EMO-ASI', nombre: 'Asistencia a entrenamientos' },
+  ]
+};
+
+export const MODIFICADORES_AVANZADOS = [
+  { id: 'MOD-COG-MUL', nombre: 'Multitasking (Cognitivo)' },
+  { id: 'MOD-COG-SIN', nombre: 'Sincronización Rítmica (Cognitivo)' },
+  { id: 'MOD-COG-ESP', nombre: 'Mirroring (Cognitivo)' },
+  { id: 'MOD-DIF-ESP', nombre: 'Espacios y Distancias (Diferencial)' },
+  { id: 'MOD-DIF-TMP', nombre: 'Velocidad y Tiempo (Diferencial)' },
+  { id: 'MOD-DIF-IMP', nombre: 'Implementos (Diferencial)' },
+  { id: 'MOD-DIF-SUP', nombre: 'Superficies de Apoyo (Diferencial)' }
+];
