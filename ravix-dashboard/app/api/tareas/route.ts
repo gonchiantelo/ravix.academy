@@ -52,21 +52,35 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const upstreamUrl = `${API_BASE}/tareas`;
 
-    const response = await fetch(upstreamUrl, {
-      method: 'POST',
-      headers: {
-        'x-api-key': API_KEY!,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(body),
-    });
+    // Timeout de 25s — Render plan free puede tardar hasta ~30s en cold start.
+    // Sin esto, Next.js corta antes y el catch devuelve el error genérico de red.
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 25000);
+
+    let response: Response;
+    try {
+      response = await fetch(upstreamUrl, {
+        method: 'POST',
+        headers: {
+          'x-api-key': API_KEY!,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+        signal: controller.signal,
+      });
+    } finally {
+      clearTimeout(timeoutId);
+    }
 
     const data = await response.json();
     return NextResponse.json(data, { status: response.status });
-  } catch (error) {
+  } catch (error: any) {
     console.error('[/api/tareas POST]', error);
+    const isTimeout = error?.name === 'AbortError';
     return NextResponse.json(
-      { error: 'Error al conectarse con ravix-api' },
+      { error: isTimeout
+          ? 'El servidor tardó demasiado en responder (cold start de Render). Esperá unos segundos y volvé a intentarlo.'
+          : 'Error al conectarse con ravix-api' },
       { status: 502 }
     );
   }

@@ -10,15 +10,17 @@ export class TareasService {
   async create(data: CreateTareaDto) {
     const { modificadores_avanzados, tarea_subpilares, ...rest } = data;
     
-    const dataToSave: any = {
-      ...rest,
-      tarea_subpilares: {
+    const dataToSave: any = { ...rest };
+
+    // tarea_subpilares es opcional al crear — se puede completar luego editando
+    if (tarea_subpilares?.create && tarea_subpilares.create.length > 0) {
+      dataToSave.tarea_subpilares = {
         create: tarea_subpilares.create.map(t => ({
           subpilar_codigo: t.subpilar_codigo,
           es_principal: t.es_principal,
         })),
-      },
-    };
+      };
+    }
 
     if (modificadores_avanzados && modificadores_avanzados.length > 0) {
       dataToSave.modificadores_avanzados = {

@@ -11,17 +11,17 @@ export class TareaSubPilarDto {
 }
 
 export class TareaSubPilaresInput {
+  @IsOptional()
   @IsArray()
-  @ArrayMinSize(1, { message: 'Sección 3: Debe haber al menos un tag (sub-pilar) asignado a la tarea.' })
   @ValidateNested({ each: true })
   @Type(() => TareaSubPilarDto)
-  create: TareaSubPilarDto[];
+  create?: TareaSubPilarDto[];
 }
 
 @ValidatorConstraint({ name: 'OnePrincipalTag', async: false })
 export class HasOnePrincipalTagConstraint implements ValidatorConstraintInterface {
   validate(tagsGroup: TareaSubPilaresInput, args: ValidationArguments) {
-    if (!tagsGroup || !tagsGroup.create || !Array.isArray(tagsGroup.create)) return false;
+    if (!tagsGroup || !tagsGroup.create || !Array.isArray(tagsGroup.create) || tagsGroup.create.length === 0) return true;
     const principalCount = tagsGroup.create.filter(t => t.es_principal === true).length;
     return principalCount === 1; // Sección 3 Regla 3: Obligatoriamente UNO
   }
@@ -79,10 +79,12 @@ export class CreateTareaDto {
   // ----------------------------------------------------
   // 6.2 Clasificación (Tags)
   // ----------------------------------------------------
+  @IsOptional()
+  @ValidateIf(o => o.tarea_subpilares !== undefined && o.tarea_subpilares !== null)
   @Validate(HasOnePrincipalTagConstraint)
   @ValidateNested()
   @Type(() => TareaSubPilaresInput)
-  tarea_subpilares: TareaSubPilaresInput;
+  tarea_subpilares?: TareaSubPilaresInput;
 
   // ----------------------------------------------------
   // 6.3 Progresión
