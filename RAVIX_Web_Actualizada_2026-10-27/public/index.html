@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="es-UY">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07140d">
+<title>RAVIX Academy | Entrenamiento de fútbol personalizado en Montevideo</title>
+<meta name="description" content="Perfeccioná tu fútbol en Nogales, Montevideo. Entrenamiento técnico, táctico y neurocognitivo. Conocé los planes Core, Pro y Elite.">
+<meta property="og:title" content="RAVIX Academy | Perfeccioná tu fútbol">
+<meta property="og:description" content="Técnica, táctica y capacidades cognitivas. Entrenamiento personalizado en Nogales, Montevideo.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_UY">
+<link rel="icon" href="assets/conejo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07140d;--surface:#10231a;--ink:#f4f5ef;--muted:#b5c4bb;--lime:#c8ff4d;--line:#294437;--display:'Anton','Arial Narrow',Impact,sans-serif;--body:'Barlow',Arial,sans-serif;--max:1160px;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}a{color:inherit}button{font:inherit}img{max-width:100%;display:block}button,a{-webkit-tap-highlight-color:transparent}:focus-visible{outline:3px solid var(--lime);outline-offset:5px}::selection{background:var(--lime);color:var(--bg)}.shell{max-width:var(--max);margin:auto;padding-inline:28px}.skip{position:fixed;top:8px;left:8px;z-index:100;transform:translateY(-150%);background:var(--lime);color:var(--bg);padding:10px}.skip:focus{transform:none}.eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--lime);text-transform:uppercase;margin:0 0 16px}.display,h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;letter-spacing:.2px;margin:0}h2{font-size:clamp(34px,4.5vw,55px)}h3{font-size:25px}p{margin:0 0 18px}.muted{color:var(--muted)}.accent{color:var(--lime)}.btn{display:inline-flex;gap:12px;align-items:center;justify-content:center;min-height:50px;padding:13px 23px;border:1px solid var(--lime);background:var(--lime);color:var(--bg);text-decoration:none;font-weight:700;font-size:16px;border-radius:4px;cursor:pointer;transition:background .18s,transform .18s}.btn:hover{background:#dcff91;transform:translateY(-2px)}.btn.secondary{background:transparent;color:var(--ink);border-color:#5c7063}.btn.secondary:hover{background:#ffffff0c}.text-link{font-weight:600;text-underline-offset:5px}.actions{display:flex;gap:12px;flex-wrap:wrap}.section{padding-block:90px;border-top:1px solid var(--line)}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:38px}.section-head>p{max-width:365px;color:var(--muted);margin:0}.kicker{font-size:12px;letter-spacing:1.3px;text-transform:uppercase;font-weight:600;color:var(--muted)}
+/* Marca y navegación */
+.topbar{position:sticky;top:0;z-index:20;background:#07140df5;border-bottom:1px solid var(--line)}.nav{height:84px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex-shrink:0}.brand img{width:43px;height:45px;object-fit:contain}.brand strong{font-family:var(--display);font-size:26px;font-weight:400;line-height:1}.brand small{display:block;font-size:9px;letter-spacing:4.5px;margin-top:5px}.nav-links{display:flex;align-items:center;gap:25px}.nav-links>a{font-size:14px;text-decoration:none;color:var(--muted)}.nav-links>a:hover{color:var(--lime)}.nav-links .btn{color:var(--bg);min-height:42px;padding:8px 17px}.menu-toggle{display:none;padding:9px 12px;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:4px;cursor:pointer}
+/* Apertura */
+.hero{position:relative;padding-block:77px 48px;overflow:hidden}.hero:before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 70% 65%,#2d4b232e,transparent 60%)}.hero-grid{display:grid;grid-template-columns:1.12fr 1fr;gap:35px;align-items:center;position:relative}.hero h1{font-size:clamp(60px,7.7vw,96px);line-height:1.04;margin:0 0 25px}.hero h1 span{display:block;color:var(--lime)}.hero .lead{max-width:490px;font-size:20px;color:var(--muted);margin-bottom:27px}.hero .location{font-size:14px;color:var(--muted);margin-top:22px}.hero-visual{position:relative;min-height:405px;display:flex;align-items:flex-end;border:1px solid #3b553d;background:#10291a;overflow:hidden}.hero-visual>img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:25% 50%;opacity:.8}.hero-visual:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#031109ed,transparent 90%)}.hero-visual .visual-copy{position:relative;z-index:1;padding:26px}.hero-visual .visual-copy strong{font-family:var(--display);font-size:33px;line-height:1.15;display:block;max-width:310px}.hero-visual .visual-copy a{display:inline-flex;margin-top:20px;color:var(--lime);font-size:15px;font-weight:600;text-decoration:none}.visual-top{position:absolute;left:21px;top:19px;z-index:2;letter-spacing:1px;font-size:11px;color:white;text-transform:uppercase;border-left:3px solid var(--lime);padding-left:10px}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;position:relative;margin-top:58px;padding-top:27px;border-top:1px solid var(--line)}.facts strong{font-family:var(--display);font-size:30px;line-height:1.1;color:var(--lime);display:block}.facts span{font-size:14px;color:var(--muted);display:block;margin-top:7px}
+/* Método */
+.method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}.method-item{padding-top:20px;border-top:2px solid var(--line)}.method-item .number{font-size:12px;color:var(--lime);font-weight:600;letter-spacing:1px}.method-item h3{margin:18px 0 13px;font-size:23px}.method-item p{font-size:16px;color:var(--muted);margin:0}.process{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:42px;padding:28px;background:var(--surface);border-left:3px solid var(--lime)}.process h3{font-family:var(--body);font-weight:700;font-size:16px;margin-bottom:8px}.process p{font-size:15px;color:var(--muted);margin:0}
+/* Trabajo real y recursos */
+.work{background:#0a1a11}.work-grid{display:grid;grid-template-columns:1.7fr 1fr;gap:35px;align-items:start}.video-wrap{border:1px solid var(--line);background:#030b07}.video-wrap video{width:100%;display:block;aspect-ratio:8/3.75;object-fit:contain}.video-caption{padding:14px 17px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin:0}.work-aside{padding:3px 0}.work-aside h3{font-size:31px;margin:0 0 17px}.work-aside p{font-size:16px;color:var(--muted)}.tags{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}.tags span{font-size:12px;letter-spacing:.5px;border:1px solid var(--line);padding:5px 9px}.video-fallback{padding:18px;display:none}.video-fallback.visible{display:block}.resource{margin-top:35px;display:flex;justify-content:space-between;gap:25px;align-items:center;border:1px solid var(--line);padding:24px}.resource h3{font-family:var(--body);font-size:19px;font-weight:700;margin-bottom:6px}.resource p{font-size:15px;color:var(--muted);margin:0}.resource .actions{flex-shrink:0}.resource .btn{font-size:14px;padding:10px 16px;min-height:43px}
+/* Planes */
+.plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.plan{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);background:var(--surface);padding:29px 25px 25px;border-radius:6px}.plan.featured{border-color:var(--lime);background:#172d1b}.plan-label{position:absolute;top:-13px;left:24px;background:var(--lime);color:var(--bg);font-weight:700;font-size:11px;letter-spacing:.6px;padding:4px 11px}.plan h3{font-size:36px}.plan .intro{font-size:15px;color:var(--muted);margin:12px 0 20px;min-height:46px}.price{font-family:var(--display);font-size:48px;line-height:1.2;letter-spacing:.3px}.price-unit{font-size:13px;color:var(--muted);margin:4px 0 25px}.frequency{font-size:17px;font-weight:700;color:var(--lime);padding-top:21px;border-top:1px solid var(--line);margin:0 0 15px}.plan ul{padding:0;list-style:none;margin:0 0 27px;flex:1}.plan li{font-size:15px;color:var(--muted);padding-left:17px;position:relative;margin:0 0 12px}.plan li:before{content:'•';color:var(--lime);position:absolute;left:0}.plan .btn{width:100%;font-size:15px;padding-inline:12px}.plan-note{font-size:14px;color:var(--muted);margin-top:23px;margin-bottom:0}.shared{display:flex;flex-wrap:wrap;gap:10px 28px;margin:27px 0 0;font-size:14px;color:var(--muted)}.shared span:before{content:'+';color:var(--lime);margin-right:9px}
+/* Evaluación */
+.evaluation{margin-top:46px;border:1px solid #5e763d;background:linear-gradient(120deg,#1b301c,#10231a);display:grid;grid-template-columns:1.1fr 1fr;gap:36px;padding:35px}.evaluation h3{font-size:34px;margin-bottom:17px}.evaluation p{font-size:16px;color:var(--muted)}.eval-price{font-family:var(--display);font-size:43px;color:var(--lime);line-height:1.1;margin-bottom:16px}.eval-price span{font-family:var(--body);color:var(--muted);font-size:14px;margin-left:10px}.evaluation ol{padding-left:21px;font-size:16px;margin:0 0 23px}.evaluation li{padding-left:7px;margin-bottom:13px}.evaluation li::marker{color:var(--lime);font-weight:700}.evaluation .small{font-size:14px;margin:0}.evaluation .small strong{color:var(--ink)}
+/* Equipo, ubicación, preguntas */
+.team-location{display:grid;grid-template-columns:1fr 1fr;gap:60px}.members{display:grid;gap:25px;margin-top:32px}.member{display:flex;gap:19px;align-items:center}.member img{width:77px;height:77px;object-fit:cover;border-radius:4px;border:1px solid var(--line)}.member h3{font-family:var(--body);font-weight:700;font-size:19px;margin-bottom:4px}.member p{margin:0;font-size:15px;color:var(--muted)}.location-panel{position:relative;background:var(--surface);padding:30px;overflow:hidden}.location-panel .display{font-size:42px;margin:18px 0}.location-panel p{font-size:16px;color:var(--muted)}.location-panel .actions{margin-top:26px}.location-panel .btn{font-size:14px;padding-inline:17px}.faq-grid{display:grid;grid-template-columns:.8fr 1.5fr;gap:65px}.faq details{border-bottom:1px solid var(--line);padding:19px 0}.faq details:first-child{padding-top:0}.faq summary{font-size:18px;font-weight:600;cursor:pointer;list-style:none;position:relative;padding-right:32px}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:'+';position:absolute;right:4px;color:var(--lime);font-size:24px;top:-5px}.faq details[open] summary:after{content:'−'}.faq details p{margin:15px 25px 0 0;color:var(--muted);font-size:16px}.final{background:var(--lime);color:var(--bg);padding:50px 0}.final .shell{display:flex;justify-content:space-between;align-items:center;gap:30px}.final h2{font-size:clamp(32px,4vw,48px)}.final p{font-size:17px;margin:13px 0 0}.final .btn{background:var(--bg);color:var(--ink);border-color:var(--bg);flex-shrink:0}footer{padding:34px 0 38px;color:var(--muted);font-size:14px}.footer-inner{display:flex;justify-content:space-between;gap:28px;align-items:flex-start}.footer-links{display:flex;gap:16px 24px;flex-wrap:wrap}.footer-links a{text-decoration:none}.footer-links a:hover{color:var(--lime)}.copyright{font-size:12px;color:#8da194;margin-top:22px}.mobile-contact{display:none}
+@media(min-width:1100px){.hero-visual{min-height:450px}}
+@media(max-width:950px){.nav-links{gap:17px}.nav-links>a{font-size:13px}.hero-grid{gap:25px}.hero h1{font-size:72px}.hero-visual{min-height:390px}.method-grid{grid-template-columns:1fr 1fr;gap:32px}.plans-grid{gap:12px}.plan{padding:26px 19px 22px}.price{font-size:42px}.plan .intro{min-height:69px}.work-grid{grid-template-columns:1.45fr 1fr;gap:25px}.team-location{gap:30px}.faq-grid{gap:35px}}
+@media(max-width:720px){body{font-size:17px}.shell{padding-inline:21px}.nav{height:72px}.brand img{width:34px;height:36px}.brand strong{font-size:23px}.brand small{font-size:8px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;padding:15px 21px 22px;gap:0;background:#07140d;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.nav-links>a{font-size:16px;padding:11px 0}.nav-links .btn{margin-top:10px;padding:12px}.hero{padding-block:44px 35px}.hero-grid{grid-template-columns:1fr;gap:32px}.hero h1{font-size:clamp(56px,13.7vw,86px);max-width:600px}.hero .lead{font-size:18px;max-width:530px}.hero .location{font-size:13px}.hero-visual{min-height:310px}.hero-visual>img{object-position:30% 50%}.hero-visual .visual-copy strong{font-size:32px}.facts{gap:12px;margin-top:30px;padding-top:23px}.facts strong{font-size:24px}.facts span{font-size:12px;line-height:1.5}.section{padding-block:56px}.section-head{display:block;margin-bottom:29px}.section-head>p{margin-top:20px;max-width:520px;font-size:16px}.method-grid{gap:28px 22px}.method-item h3{font-size:22px}.method-item p{font-size:15px}.process{grid-template-columns:1fr;gap:23px;padding:24px;margin-top:29px}.work-grid{grid-template-columns:1fr;gap:25px}.work-aside h3{font-size:29px}.work-aside .tags{margin-top:16px}.resource{flex-direction:column;align-items:flex-start;padding:23px}.resource .actions{width:100%}.resource .btn{flex:1}.plans-grid{grid-template-columns:1fr;gap:24px}.plan{padding:26px}.plan .intro{min-height:0;margin:10px 0 17px}.price{font-size:49px}.plan ul{margin-bottom:16px}.plan li{font-size:16px}.plan .frequency{font-size:19px}.shared{gap:9px 20px}.evaluation{grid-template-columns:1fr;gap:24px;padding:26px;margin-top:30px}.evaluation h3{font-size:32px}.evaluation ol{font-size:16px}.team-location{grid-template-columns:1fr;gap:38px}.location-panel{padding:26px}.faq-grid{grid-template-columns:1fr;gap:29px}.faq summary{font-size:17px}.final .shell{display:block}.final .btn{margin-top:24px;width:100%}.footer-inner{display:block}.footer-links{margin-top:23px;gap:13px 20px}footer{padding-bottom:105px}.mobile-contact{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:25;align-items:center;justify-content:space-between;gap:15px;padding:11px 20px calc(11px + env(safe-area-inset-bottom));background:#07140df7;border-top:1px solid var(--line)}.mobile-contact span{font-size:12px;line-height:1.3;color:var(--muted)}.mobile-contact .btn{font-size:14px;min-height:42px;padding:9px 16px}.actions .btn{flex-grow:1}.nav-links .btn{flex-grow:0}}
+@media(max-width:370px){.hero h1{font-size:53px}.method-grid{grid-template-columns:1fr}.facts strong{font-size:21px}.facts span{font-size:11px}.evaluation{padding:22px}.resource .actions{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+@media print{.topbar,.mobile-contact,.hero-visual,.work,.final,.menu-toggle{display:none!important}body{background:white;color:black;font-size:11pt}.section{padding-block:18px}h1,h2,h3,.accent,.muted,p{color:black!important}.plan,.evaluation,.location-panel,.process{break-inside:avoid;background:white;border:1px solid #aaa}.plans-grid{display:block}.plan{margin-bottom:12px}.btn{display:none}}
+/* Fondo de cancha y comparativa */
+.bg-fx{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;opacity:.38}
+.bg-fx::before{content:'';position:absolute;inset:-12%;background:radial-gradient(ellipse at 68% 28%,#637b3320,transparent 54%),linear-gradient(90deg,transparent 49.9%,#d9f4d00a 50%,transparent 50.1%),linear-gradient(0deg,transparent 49.9%,#d9f4d00a 50%,transparent 50.1%);background-size:auto,100% 100%,100% 100%;animation:pitch-drift 42s ease-in-out infinite alternate}
+.bg-fx::after{content:'';position:absolute;inset:12% 8%;border:1px solid #d9f4d00a;border-radius:50%;transform:rotate(-12deg);}
+@keyframes pitch-drift{to{transform:translate3d(1.5%,1%,0) scale(1.02)}}
+.plan-group:last-of-type{margin-bottom:20px}.plan>a.btn{margin-top:auto}
+.topbar,main,footer{position:relative;z-index:1}
+.plan{border-radius:4px}.plan.featured{box-shadow:inset 0 3px 0 var(--lime)}.plan-label{max-width:calc(100% - 32px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.class-count{font-family:var(--display);font-size:23px;color:var(--lime);padding:11px 0 0}.plan-group{border-top:1px solid var(--line);padding-top:15px;margin-top:16px}.plan-group h4{font-family:var(--body);font-size:12px;line-height:1.3;letter-spacing:1px;color:var(--ink);margin:0 0 11px}.feature-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:start;padding:9px 0;border-bottom:1px solid #ffffff0d;font-size:14px;line-height:1.35;color:var(--muted)}.feature-row:last-child{border-bottom:0}.feature-row strong{min-width:40px;text-align:right;font-size:16px}.feature-row .included{color:var(--lime)}.feature-row .not-included{color:#819187;font-weight:500}.feature-row small{display:block;font-size:12px;line-height:1.35;color:#9daea3;margin-top:4px}.plan>a.btn{margin-top:24px}
+.plan-note{line-height:1.6}.shared{row-gap:12px}.evaluation{scroll-margin-top:100px}.evaluation h3{line-height:1.2}.eval-highlight{font-size:20px!important;color:var(--lime)!important;font-weight:700}.eval-points{list-style:none;padding:0;margin:20px 0 0}.eval-points li{margin:0 0 11px;padding-left:22px;position:relative}.eval-points li::before{content:'✓';position:absolute;left:0;color:var(--lime);font-weight:700}.eval-price{font-family:var(--display);font-size:clamp(27px,3vw,38px);line-height:1.2;color:var(--lime);margin:0 0 18px}.evaluation .small{margin-top:14px}.advisory-responsible{font-weight:600;margin:24px 0 9px}.development-label{display:inline-block;color:var(--lime);border:1px solid #7d9d43;padding:6px 10px;margin:0 0 20px;font-size:13px;font-weight:700}.advisory-grid{margin-top:28px}.video-gallery{min-width:0}.video-caption h3{font-family:var(--body);font-weight:700;font-size:18px;margin:0 0 5px;color:var(--ink)}.video-caption p{font-size:14px;color:var(--muted);margin:0}.video-thumbnails{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.video-thumb{padding:9px 12px;border:1px solid var(--line);background:transparent;color:var(--muted);text-align:left;font-size:13px;cursor:pointer}.video-thumb[aria-pressed="true"]{border-color:var(--lime);color:var(--lime)}
+.fade{opacity:0;transform:translateY(14px);transition:opacity .45s ease,transform .45s ease}.visible{opacity:1;transform:none}
+@media(max-width:720px){.plan-label{left:18px;font-size:10px}.feature-row{font-size:15px}.feature-row small{font-size:13px}.evaluation{margin-top:32px}.video-thumbnails{display:grid;grid-template-columns:1fr}.video-thumb{text-align:left}.eval-price{font-size:32px}}
+@media(prefers-reduced-motion:reduce){.bg-fx::before,.fade{animation:none!important;transition:none!important}.fade{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Ir al contenido</a>
+<div class="bg-fx" aria-hidden="true"></div>
+<header class="topbar">
+ <div class="nav shell">
+  <a class="brand" href="#inicio" aria-label="RAVIX Academy, inicio"><img src="assets/conejo.png" width="43" height="45" alt=""><span><strong>RAVIX</strong><small>ACADEMY</small></span></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navegacion">Menú <span aria-hidden="true">+</span></button>
+  <nav class="nav-links" id="navegacion" aria-label="Navegación principal"><a href="#metodo">Método</a><a href="#en-cancha">En cancha</a><a href="#planes">Planes</a><a href="#equipo">Equipo y sede</a><a class="btn" data-wa="Hola, quiero conocer la propuesta de RAVIX." href="https://wa.me/59892105554">Hablemos <span aria-hidden="true">↗</span></a></nav>
+ </div>
+</header>
+<main id="contenido">
+<section class="hero" id="inicio">
+ <div class="shell">
+  <div class="hero-grid">
+   <div>
+    <p class="eyebrow">Fútbol · Entrenamiento personalizado</p>
+    <h1>PERFECCIONÁ<span>TU FÚTBOL.</span></h1>
+    <p class="lead">Técnica, táctica y capacidades cognitivas. Trabajamos los detalles de tu juego y te damos devoluciones sobre el entrenamiento.</p>
+    <div class="actions"><a class="btn" href="#planes">Conocé los planes <span aria-hidden="true">↓</span></a><a class="btn secondary" data-wa="Hola, quiero conocer la propuesta de RAVIX." href="https://wa.me/59892105554">Consultanos</a></div>
+    <p class="location">Ciudad Deportiva Nogales · Montevideo, Uruguay</p>
+   </div>
+   <div class="hero-visual">
+    <img src="assets/entrenamiento-poster.jpg" width="960" height="450" alt="Trabajo con balón y entrenador en la cancha sintética de Nogales" fetchpriority="high">
+    <span class="visual-top">RAVIX / EN CANCHA</span>
+    <div class="visual-copy"><strong>CADA DETALLE<br>TIENE UN OBJETIVO.</strong><a href="#en-cancha">Mirá cómo trabajamos <span aria-hidden="true">↗</span></a></div>
+   </div>
+  </div>
+  <div class="facts" aria-label="Formato de entrenamiento"><div><strong>HASTA 5</strong><span>jugadores por entrenador</span></div><div><strong>60 MIN</strong><span>por sesión de trabajo</span></div><div><strong>TU OBJETIVO</strong><span>en el centro de la planificación</span></div></div>
+ </div>
+</section>
+<section class="section" id="metodo">
+ <div class="shell">
+  <div class="section-head"><div><p class="eyebrow">El método RAVIX</p><h2>EN TODOS LOS PLANES<br><span class="accent">TRABAJAMOS.</span></h2></div><p>Perfeccionamiento futbolístico complementario a tu actividad en el club, adaptado a tus objetivos y calendario.</p></div>
+  <div class="method-grid">
+   <article class="method-item"><span class="number">01 / TÉCNICA</span><h3>TÉCNICA INDIVIDUAL</h3><p>Control, pase y ejecución con balón en tareas vinculadas al juego.</p></article>
+   <article class="method-item"><span class="number">02 / JUEGO</span><h3>COMPRENSIÓN TÁCTICA</h3><p>Todos los planes trabajan aspectos tácticos dentro del entrenamiento.</p></article>
+   <article class="method-item"><span class="number">03 / PERCEPCIÓN</span><h3>ESCANEO Y DECISIÓN</h3><p>Lectura de información y toma de decisiones en situaciones de cancha.</p></article>
+   <article class="method-item"><span class="number">04 / COGNICIÓN</span><h3>ATENCIÓN Y MEMORIA</h3><p>Atención, concentración y memoria aplicadas al juego.</p></article>
+  </div>
+  <div class="process"><article><h3>Herramientas de trabajo</h3><p>Utilizamos tareas, sensores y tecnología como recursos del método; ningún dispositivo garantiza una mejora por sí solo.</p></article><article><h3>Clases de enfoque individual</h3><p>Pro y Elite agregan clases específicas cuyo enfoque se acuerda con el jugador y, cuando corresponda, su familia.</p></article><article><h3>Contenido adaptable</h3><p>Ese espacio puede centrarse en táctica o adaptarse a tareas neurocognitivas en cancha, manteniendo las clases contratadas.</p></article></div>
+ </div>
+</section>
+<section class="section work" id="en-cancha">
+ <div class="shell">
+  <div class="section-head"><div><p class="eyebrow">Del método a la cancha</p><h2>ASÍ <span class="accent">TRABAJAMOS.</span></h2></div><p>Entrenadores, balón y tareas específicas. Conocé una parte de nuestro trabajo real en Nogales.</p></div>
+  <div class="work-grid">
+   <div class="video-gallery">
+    <div class="video-wrap"><video id="training-video" controls playsinline preload="none" poster="assets/entrenamiento-poster.jpg" aria-label="Fragmento real de entrenamiento RAVIX en Nogales"><source src="assets/entrenamiento-ravix.mp4" type="video/mp4">Tu navegador no puede reproducir el video. <a href="https://www.instagram.com/ravix.academy/">Ver RAVIX en Instagram</a>.</video><div class="video-fallback"><a class="text-link" href="https://www.instagram.com/ravix.academy/" target="_blank" rel="noopener noreferrer">Ver entrenamientos en Instagram ↗</a></div></div>
+    <div class="video-caption" aria-live="polite"><h3 id="video-title">Control y pase</h3><p id="video-description">Observá la orientación corporal, el control y la precisión del pase durante una tarea real.</p></div>
+    <div class="video-thumbnails" id="video-thumbnails" aria-label="Seleccionar actividad"></div>
+   </div>
+   <div class="work-aside"><h3>LO QUE HACÉS.<br>LO QUE OBSERVAMOS.</h3><p>Cada tarea tiene una consigna y un foco de trabajo. La devolución te ayuda a entender qué estás entrenando y qué detalles observar.</p><div class="tags" aria-label="Aspectos de trabajo"><span>CONTROL</span><span>PASE</span><span>PERFILAMIENTO</span><span>DECISIONES</span></div><a class="text-link" href="https://www.instagram.com/ravix.academy/" target="_blank" rel="noopener noreferrer">Más sesiones en @ravix.academy ↗</a></div>
+  </div>
+</section>
+<section class="section" id="planes">
+ <div class="shell">
+  <div class="section-head"><div><p class="eyebrow">Planes mensuales</p><h2>UN PLAN PARA<br><span class="accent">TU PROCESO.</span></h2></div><p>Elegí tu frecuencia de trabajo. Te orientamos según lo que querés desarrollar y tu disponibilidad.</p></div>
+  <div class="plans-grid">
+   <article class="plan"><h3>CORE</h3><p class="intro">Una sesión semanal para trabajar los detalles de tu juego.</p><div class="class-count">4 clases mensuales</div><div class="price">$3.990</div><p class="price-unit">UYU / mes</p><div class="plan-group"><h4>TUS CLASES</h4><div class="feature-row"><span>Entrenamientos en cancha</span><strong class="included">✓ 4</strong></div><div class="feature-row"><span>Clases de enfoque individual <small>Táctica o trabajo neurocognitivo en cancha, según tus objetivos.</small></span><strong class="not-included">—</strong></div></div><div class="plan-group"><h4>EVALUACIONES Y DEVOLUCIONES</h4><div class="feature-row"><span>Evaluación inicial</span><strong class="included">✓</strong></div><div class="feature-row"><span>Evaluación al finalizar el ciclo</span><strong class="included">✓</strong></div><div class="feature-row"><span>Videoanálisis mensual del entrenamiento</span><strong class="included">✓</strong></div><div class="feature-row"><span>Carnet mensual de rendimiento</span><strong class="included">✓</strong></div></div><div class="plan-group"><h4>SEGUIMIENTO</h4><div class="feature-row"><span>Seguimiento individual</span><strong class="not-included">—</strong></div><div class="feature-row"><span>Seguimiento de tu competencia</span><strong class="not-included">—</strong></div></div><a class="btn secondary" data-wa="Hola, quiero consultar por el Plan Core de RAVIX." href="https://wa.me/59892105554">Consultar Core</a></article>
+   <article class="plan featured"><span class="plan-label">CANCHA + ENFOQUE INDIVIDUAL</span><h3 class="accent">PRO</h3><p class="intro">Más espacios para entrenar y abordar objetivos específicos.</p><div class="class-count">8 clases mensuales</div><div class="price">$6.490</div><p class="price-unit">UYU / mes</p><div class="plan-group"><h4>TUS CLASES</h4><div class="feature-row"><span>Entrenamientos en cancha</span><strong class="included">✓ 6</strong></div><div class="feature-row"><span>Clases de enfoque individual <small>Táctica o trabajo neurocognitivo en cancha, según tus objetivos.</small></span><strong class="included">✓ 2</strong></div></div><div class="plan-group"><h4>EVALUACIONES Y DEVOLUCIONES</h4><div class="feature-row"><span>Evaluación inicial</span><strong class="included">✓</strong></div><div class="feature-row"><span>Evaluación al finalizar el ciclo</span><strong class="included">✓</strong></div><div class="feature-row"><span>Videoanálisis mensual del entrenamiento</span><strong class="included">✓</strong></div><div class="feature-row"><span>Carnet mensual de rendimiento</span><strong class="included">✓</strong></div></div><div class="plan-group"><h4>SEGUIMIENTO</h4><div class="feature-row"><span>Seguimiento individual</span><strong class="included">✓</strong></div><div class="feature-row"><span>Seguimiento de tu competencia</span><strong class="not-included">—</strong></div></div><a class="btn" data-wa="Hola, quiero consultar por el Plan Pro de RAVIX." href="https://wa.me/59892105554">Consultar Pro</a></article>
+   <article class="plan"><h3>ELITE</h3><p class="intro">Mayor frecuencia para sostener el trabajo durante el mes.</p><div class="class-count">12 clases mensuales</div><div class="price">$10.990</div><p class="price-unit">UYU / mes</p><div class="plan-group"><h4>TUS CLASES</h4><div class="feature-row"><span>Entrenamientos en cancha</span><strong class="included">✓ 9</strong></div><div class="feature-row"><span>Clases de enfoque individual <small>Táctica o trabajo neurocognitivo en cancha, según tus objetivos.</small></span><strong class="included">✓ 3</strong></div></div><div class="plan-group"><h4>EVALUACIONES Y DEVOLUCIONES</h4><div class="feature-row"><span>Evaluación inicial</span><strong class="included">✓</strong></div><div class="feature-row"><span>Evaluación al finalizar el ciclo</span><strong class="included">✓</strong></div><div class="feature-row"><span>Videoanálisis mensual del entrenamiento</span><strong class="included">✓</strong></div><div class="feature-row"><span>Carnet mensual de rendimiento</span><strong class="included">✓</strong></div></div><div class="plan-group"><h4>SEGUIMIENTO</h4><div class="feature-row"><span>Seguimiento individual</span><strong class="included">✓</strong></div><div class="feature-row"><span>Seguimiento de tu competencia</span><strong class="included">✓</strong></div></div><a class="btn secondary" data-wa="Hola, quiero consultar por el Plan Elite de RAVIX." href="https://wa.me/59892105554">Consultar Elite</a></article>
+  </div>
+  <p class="plan-note">Adaptamos el enfoque a cada jugador. Las clases específicas pueden centrarse en táctica o reemplazarse por tareas neurocognitivas en cancha de baja exigencia física, manteniendo el total de clases del plan. Las ocho clases de Pro y las doce de Elite se mantienen; una clase específica realizada en cancha no aumenta el total mensual.</p>
+  <div class="shared"><span>Clases de 60 minutos</span><span>Grupos de hasta cinco jugadores por entrenador</span><span>Contratación mínima de tres meses</span><span>Precios mensuales</span><span>Horarios coordinados según disponibilidad</span></div>
+  <aside class="evaluation" id="evaluacion" aria-labelledby="eval-title">
+   <div><p class="eyebrow">Evaluación inicial</p><h3 id="eval-title">Conocé tu punto de partida.</h3><p class="eval-highlight">Entrenás, te evaluamos y te llevás tus resultados.</p><p>Una sesión en cancha para conocer cómo estás hoy, identificar aspectos a trabajar y llevarte una devolución que te ayude a entender tu rendimiento.</p><ul class="eval-points"><li>Evaluación en cancha.</li><li>Resultados de los aspectos evaluados.</li><li>Devolución sobre los puntos a trabajar.</li></ul></div>
+   <div><div class="eval-price">Evaluación inicial · $1.300 UYU</div><p>Si contratás un plan, descontamos los $1.300 de tu primera mensualidad.</p><p>Si decidís no continuar, igualmente te llevás tus resultados y la devolución.</p><a class="btn" data-wa="Hola, quiero hacer mi evaluación inicial de RAVIX." href="https://wa.me/59892105554">Quiero hacer mi evaluación</a><p class="small">La evaluación se abona antes de la sesión.</p></div>
+  </aside>
+ </div>
+ </section>
+<section class="section" id="asesoria">
+  <div class="shell">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Servicio complementario · En desarrollo</p>
+        <h2>Asesoría personalizada 1:1</h2>
+        <p>Tu carrera deportiva también se construye fuera de la cancha. Estamos desarrollando un espacio individual para ordenar objetivos, comprender decisiones y orientar los próximos pasos de tu recorrido deportivo.</p>
+      </div>
+    </div>
+    <div class="method-grid advisory-grid">
+      <article class="method-item"><h3>Management deportivo</h3><p>Organización y planificación de tu carrera.</p></article>
+      <article class="method-item"><h3>Orientación de carrera</h3><p>Objetivos, alternativas y próximos pasos.</p></article>
+      <article class="method-item"><h3>Aspectos legales del deporte</h3><p>Orientación general sobre qué revisar y cuándo consultar a un profesional especializado.</p></article>
+    </div>
+    <p class="advisory-responsible">A cargo de una Licenciada en Gestión Deportiva.</p>
+    <p class="development-label">Próximamente · En desarrollo</p>
+    <a class="btn" data-wa="Hola, me interesa recibir información cuando esté disponible la asesoría personalizada 1:1 de RAVIX." href="https://wa.me/59892105554">Quiero recibir información</a>
+  </div>
+</section>
+<section class="section" id="convenios">
+  <div class="shell">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Alianzas</p>
+        <h2>Convenios y beneficios</h2>
+        <p>Estamos construyendo vínculos con marcas e instituciones para sumar oportunidades que acompañen el desarrollo de nuestra comunidad.</p>
+        <p class="plan-note">Los convenios y beneficios se publicarán a medida que se confirmen.</p>
+      </div>
+    </div>
+    <a class="btn" data-wa="Hola, represento a una empresa o institución y me gustaría conversar sobre una posible alianza con RAVIX." href="https://wa.me/59892105554">Conversemos una alianza</a>
+  </div>
+</section>
+<section class="section" id="equipo">
+ <div class="shell team-location">
+  <div><p class="eyebrow">Cercanía y formación</p><h2>QUIÉNES<br><span class="accent">TE ACOMPAÑAN.</span></h2><div class="members"><article class="member"><img src="assets/gonzalo.jpg" width="77" height="77" alt="Gonzalo Antelo" loading="lazy"><div><h3>Gonzalo Antelo</h3><p>Cofundador · Director técnico<br>Licencia PRO</p></div></article><article class="member"><img src="assets/andres.jpg" width="77" height="77" alt="Andrés Gómez" loading="lazy"><div><h3>Andrés Gómez</h3><p>Cofundador · Director técnico<br>Licenciado en Psicología</p></div></article></div></div>
+  <aside class="location-panel"><p class="eyebrow">Nuestra sede / Montevideo</p><h2 class="display">CIUDAD DEPORTIVA<br><span class="accent">NOGALES.</span></h2><p>Entrenamientos en Ciudad Deportiva Nogales.</p><p>Coordinamos los horarios según la disponibilidad.</p><div class="actions"><a class="btn secondary" href="https://www.google.com/maps/place/Nogales+Ciudad+Deportiva/@-34.8588403,-56.062241,17z/data=!3m1!4b1!4m6!3m5!1s0x959f87d1b25dec33:0xe8693d75048b191!8m2!3d-34.8588403!4d-56.062241!16s%2Fg%2F11h_vwyt1h" target="_blank" rel="noopener noreferrer">Cómo llegar ↗</a><a class="btn" data-wa="Hola, quiero consultar los horarios para entrenar en Nogales." href="https://wa.me/59892105554">Consultar horarios</a></div></aside>
+ </div>
+</section>
+<section class="section">
+ <div class="shell faq-grid"><div><p class="eyebrow">Antes de empezar</p><h2>TUS <span class="accent">PREGUNTAS.</span></h2><p class="muted" style="margin-top:22px">Si tu caso necesita otra explicación, conversemos.</p></div><div class="faq">
+ <details><summary>¿Para quién es RAVIX?</summary><p>Para futbolistas mujeres y hombres desde los 13 años que buscan perfeccionarse. Trabajamos con jugadores formativos, amateurs, semiprofesionales y profesionales. Primero conocemos tus objetivos para orientar el trabajo.</p></details>
+ <details><summary>¿Reemplaza el entrenamiento de mi club?</summary><p>Es un trabajo complementario. La planificación considera lo que entrenás en tu equipo y tu calendario de competencia.</p></details>
+ <details><summary>¿Cuál es la diferencia entre los planes?</summary><p>Core incluye cuatro clases mensuales, todas en cancha. Pro incluye ocho: seis en cancha y dos de enfoque individual. Elite incluye doce: nueve en cancha y tres de enfoque individual. Estas clases específicas pueden centrarse en táctica o adaptarse a tareas neurocognitivas en cancha; el total mensual se mantiene.</p></details>
+ <details><summary>¿Qué son las clases de enfoque individual?</summary><p>Son clases que habitualmente destinamos a táctica y que podemos adaptar a las necesidades del jugador. Pueden trabajar comprensión del juego o tareas neurocognitivas en cancha, de baja exigencia física y alta demanda de atención, concentración y toma de decisiones. Podemos usar esta modalidad cuando observamos que el jugador necesita reforzar su respuesta ante la frustración o sus recursos cognitivos durante el entrenamiento. El enfoque se acuerda según los objetivos del proceso, con el jugador y, cuando corresponda, su familia.</p></details>
+ <details><summary>¿Qué incluye el seguimiento?</summary><p>El seguimiento individual es una prestación adicional de Pro y Elite. El seguimiento de tu competencia está incluido únicamente en Elite. En todos los planes hay atención del entrenador durante las clases, videoanálisis mensual del entrenamiento y carnet mensual de rendimiento.</p></details>
+ <details><summary>¿Cuánto dura el proceso?</summary><p>La contratación mínima es de tres meses. Los precios son mensuales y los horarios se coordinan según disponibilidad.</p></details>
+ <details><summary>¿Qué me llevo de la evaluación de $1.300?</summary><p>Una evaluación en cancha, los resultados de los aspectos evaluados y una devolución sobre los puntos a trabajar. Se abona antes de la sesión. Si contratás un plan, descontamos los $1.300 de tu primera mensualidad; si no continuás, igualmente te llevás los resultados y la devolución.</p></details>
+ <details><summary>¿Cómo coordinamos el horario y el pago?</summary><p>Escribinos por WhatsApp para confirmar disponibilidad, elegir el plan y recibir los datos y medios de pago vigentes. Si la consulta es por un menor de edad, coordinamos la contratación con su adulto responsable.</p></details>
+ </div></div>
+</section>
+<section class="final"><div class="shell"><div><h2>TU PRÓXIMO PASO<br>EMPIEZA CON UNA CHARLA.</h2><p>Contanos qué querés mejorar y cómo estás entrenando hoy.</p></div><a class="btn" data-wa="Hola, quiero contarles qué me gustaría trabajar en RAVIX." href="https://wa.me/59892105554">Hablemos por WhatsApp ↗</a></div></section>
+</main>
+<footer><div class="shell"><div class="footer-inner"><a class="brand" href="#inicio" aria-label="RAVIX Academy, volver al inicio"><img src="assets/conejo.png" width="43" height="45" loading="lazy" alt=""><span><strong>RAVIX</strong><small>ACADEMY</small></span></a><div class="footer-links"><a href="https://www.instagram.com/ravix.academy/" target="_blank" rel="noopener noreferrer">@ravix.academy ↗</a><a href="mailto:ravix.training@gmail.com">ravix.training@gmail.com</a><a href="https://wa.me/59892105554">+598 92 105 554</a></div></div><p class="copyright">RAVIX Academy © 2026 · Montevideo, Uruguay.</p></div></footer>
+<div class="mobile-contact"><span>RAVIX ACADEMY<br>Nogales · Montevideo</span><a class="btn" data-wa="Hola, quiero conocer la propuesta de RAVIX." href="https://wa.me/59892105554">Consultá por WhatsApp ↗</a></div>
+<script>
+// Centraliza los mensajes de cada consulta. Sin formularios ni almacenamiento de datos.
+document.querySelectorAll('[data-wa]').forEach(function(a){a.href='https://wa.me/59892105554?text='+encodeURIComponent(a.dataset.wa);a.target='_blank';a.rel='noopener noreferrer';});
+const menu=document.querySelector('.menu-toggle');const nav=document.querySelector('.nav-links');
+menu.addEventListener('click',function(){const open=this.getAttribute('aria-expanded')!=='true';this.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);this.querySelector('span').textContent=open?'−':'+';});
+nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.setAttribute('aria-expanded','false');nav.classList.remove('open');menu.querySelector('span').textContent='+';});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){menu.click();menu.focus();}});
+const videoItems=[
+ {title:'Control y pase',description:'Observá la orientación corporal, el control y la precisión del pase durante una tarea real.',src:'assets/entrenamiento-ravix.mp4',poster:'assets/entrenamiento-poster.jpg',active:true},
+ {title:'Escaneo y toma de decisiones',description:'Un espacio reservado para observar la búsqueda de información y las decisiones en cancha.',src:'',poster:'',active:false},
+ {title:'Perfilamiento y precisión',description:'Un espacio reservado para observar la orientación corporal y la ejecución técnica.',src:'',poster:'',active:false},
+ {title:'Videoanálisis y seguimiento',description:'Un espacio reservado para mostrar cómo revisamos el entrenamiento y sus detalles.',src:'',poster:'',active:false}
+];
+const video=document.querySelector('#training-video');const videoSource=video.querySelector('source');const thumbnails=document.querySelector('#video-thumbnails');
+function showVideoFallback(){document.querySelector('.video-fallback').classList.add('visible');}
+function selectVideo(item,button){video.pause();videoSource.src=item.src;video.poster=item.poster;video.setAttribute('aria-label',item.title+' · video de entrenamiento RAVIX');video.load();document.querySelector('#video-title').textContent=item.title;document.querySelector('#video-description').textContent=item.description;thumbnails.querySelectorAll('button').forEach(function(thumb){thumb.setAttribute('aria-pressed',String(thumb===button));});}
+const activeVideos=videoItems.filter(function(item){return item.active&&item.src&&item.poster;});
+activeVideos.forEach(function(item,index){const button=document.createElement('button');button.type='button';button.className='video-thumb';button.style.cssText='display:flex;align-items:center;gap:12px;width:min(100%,360px);min-height:70px;padding:8px';button.setAttribute('aria-label','Seleccionar video: '+item.title);button.setAttribute('aria-pressed',String(index===0));const image=document.createElement('img');image.src=item.poster;image.alt='';image.loading='lazy';image.style.cssText='width:88px;height:50px;object-fit:cover;flex-shrink:0';const label=document.createElement('span');label.textContent=item.title;button.append(image,label);button.addEventListener('click',function(){selectVideo(item,button);});thumbnails.appendChild(button);});
+if(activeVideos.length){selectVideo(activeVideos[0],thumbnails.querySelector('button'));}
+video.addEventListener('error',showVideoFallback);videoSource.addEventListener('error',showVideoFallback);
+// Fade‑in sections on scroll, respecting reduced motion
+if (window.IntersectionObserver) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.1});
+  document.querySelectorAll('.section').forEach(sec => {
+    sec.classList.add('fade');
+    observer.observe(sec);
+  });
+}
+</script>
+</body>
+</html>
