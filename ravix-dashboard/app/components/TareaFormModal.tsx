@@ -92,11 +92,7 @@ export function TareaFormModal({ onClose, onSuccess, initialData }: TareaFormMod
     e.preventDefault();
     setApiError(null);
 
-    if (selectedTags.length === 0) {
-      setApiError('Debes seleccionar al menos un sub-pilar (tag).');
-      return;
-    }
-    if (!principalTag) {
+    if (selectedTags.length > 0 && !principalTag) {
       setApiError('Debes marcar exactamente un sub-pilar como Principal.');
       return;
     }
@@ -114,10 +110,12 @@ export function TareaFormModal({ onClose, onSuccess, initialData }: TareaFormMod
       return val ? val.split(',').map(s => s.trim()).filter(Boolean) : [];
     };
 
-    const tarea_subpilares = selectedTags.map(tag => ({
-      subpilar_codigo: tag,
-      es_principal: tag === principalTag
-    }));
+    const tarea_subpilares = selectedTags.length > 0 ? {
+      create: selectedTags.map(tag => ({
+        subpilar_codigo: tag,
+        es_principal: tag === principalTag
+      }))
+    } : undefined;
 
     const fullPayload: any = {
       id_tarea: getVal('id_tarea'),
